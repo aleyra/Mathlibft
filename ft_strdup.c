@@ -1,21 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 11:20:56 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:21:08 by lburnet          ###   ########lyon.fr   */
+/*   Created: 2020/11/25 14:39:55 by lburnet           #+#    #+#             */
+/*   Updated: 2020/11/25 15:56:40 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	if ('0' <= (unsigned char)c && (unsigned char)c <= '9')
-		return (1);
+	int i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (dest);
+}
+
+char	*ft_strdup(const char *src)
+{
+	char			*str;
+	unsigned int	len_src;
+
+	len_src = ft_strlen(src) + 1;
+	if (!(str = (char *)malloc(len_src * sizeof(char))))
+		return (NULL);
+	ft_strcpy(str, src);
+	if (str[len_src - 1] == 0)
+		return (str);
 	else
-		return (0);
+		return (NULL);
 }

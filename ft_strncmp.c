@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 11:20:56 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:21:08 by lburnet          ###   ########lyon.fr   */
+/*   Created: 2020/10/12 10:20:07 by lburnet           #+#    #+#             */
+/*   Updated: 2020/11/25 15:41:46 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isdigit(int c)
+int		ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	if ('0' <= (unsigned char)c && (unsigned char)c <= '9')
-		return (1);
-	else
-		return (0);
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
+	{
+		if (s1[i] - s2[i] != 0)
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }

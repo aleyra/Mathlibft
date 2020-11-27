@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 11:20:56 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:21:08 by lburnet          ###   ########lyon.fr   */
+/*   Created: 2020/11/25 14:43:35 by lburnet           #+#    #+#             */
+/*   Updated: 2020/11/25 15:57:32 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if ('0' <= (unsigned char)c && (unsigned char)c <= '9')
-		return (1);
-	else
-		return (0);
+	char	*p;
+	char	*r;
+
+	if (!(p = malloc((len + 1) * sizeof(char))))
+		return (NULL);
+	r = (char *)p;
+	while (start-- > 0 && *s != 0)
+		s++;
+	while (len-- > 0 && *s != 0)
+	{
+		*p = *s;
+		p++;
+		s++;
+	}
+	return (r);
 }

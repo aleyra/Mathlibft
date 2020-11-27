@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/13 08:37:40 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/20 14:29:06 by lucille          ###   ########lyon.fr   */
+/*   Created: 2020/10/09 15:28:32 by lburnet           #+#    #+#             */
+/*   Updated: 2020/11/25 15:14:17 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_strlen(char *str)
+int		ft_strlen(const char *str)
 {
 	int i;
 

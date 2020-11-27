@@ -1,14 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/24 11:10:39 by lburnet           #+#    #+#             */
+/*   Updated: 2020/11/24 15:55:23 by lburnet          ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned char *ptr;
+	unsigned char *d;
+	unsigned char *s;
 
-	*ptr = dest;
-	while(n-- > 0 && *src != (unsigned char)c)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (n-- > 0 && *s != (unsigned char)c)
 	{
-		*ptr++ = *src++; 
+		*d++ = *s++;
 	}
-	return dest;
-
+	*d = *s;
+	return (dest);
 }
