@@ -6,15 +6,19 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 14:28:58 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/25 15:40:51 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 16:59:34 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
-{
-	unsigned int i;
-	unsigned int j;
+#include "libft.h"
 
+size_t		ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t i;
+	size_t j;
+
+	if (src == 0)
+		return (0);
 	i = 0;
 	j = 0;
 	while (src[j])

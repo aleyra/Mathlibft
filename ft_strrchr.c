@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:36:00 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 15:58:35 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 12:33:35 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 			lp = p;
 		p++;
 	}
+	if (*p == (char)c)
+		lp = p;
 	return (lp);
 }

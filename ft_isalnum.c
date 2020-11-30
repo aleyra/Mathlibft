@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:43:44 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:43:56 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 11:04:15 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_isalnum(int c)
 {
-	if (('A' <= (unsigned char)c && (unsigned char)c <= 'Z')
-			|| ('a' <= (unsigned char)c && (unsigned char)c <= 'z')
-			|| ('0' <= (unsigned char)c && (unsigned char)c <= '9'))
+	if (('A' <= c && c <= 'Z')
+			|| ('a' <= c && c <= 'z')
+			|| ('0' <= c && c <= '9'))
 		return (1);
 	else
 		return (0);

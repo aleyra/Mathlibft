@@ -6,13 +6,15 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 15:28:32 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/25 15:14:17 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 10:39:08 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str)
+#include "libft.h"
+
+size_t		ft_strlen(const char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i])

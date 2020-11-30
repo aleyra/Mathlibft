@@ -6,62 +6,113 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:25:39 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/25 16:38:18 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 15:13:22 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	strlen_without_set(const char *s1, const char *set)
+char		*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
+	size_t i;
 
 	i = 0;
-	k = ft_strlen(s1);
-	while (s1[i] != 0)
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = 0;
+		i++;
+	}
+	return (dest);
+}
+
+size_t		strlen_f_trimmed(const char *s1, const char *set)
+{
+	size_t		j;
+	size_t		len;
+	int			non_set;
+
+	len = ft_strlen(s1);
+	non_set = 0;
+	while (non_set == 0 && *s1 != 0)
+	{
+		j = 0;
+		while (set[j] != 0)
+		{
+			if (*s1 != set[j])
+			{
+				j++;
+				non_set = (set[j] == 0) ? 1 : 0;
+			}
+			else
+			{
+				len--;
+				j = ft_strlen(set);
+			}
+		}
+		s1++;
+	}
+	return (len);
+}
+
+size_t		strlen_b_trimmed(const char *s1, const char *set, size_t len)
+{
+	size_t		i;
+	size_t		j;
+	int			non_set;
+
+	i = ft_strlen(s1) - 1;
+	non_set = 0;
+	while (non_set == 0 && s1[i] && len != 0)
 	{
 		j = 0;
 		while (set[j] != 0)
 		{
 			if (s1[i] != set[j])
+			{
 				j++;
+				non_set = (set[j] == 0) ? 1 : 0;
+			}
 			else
 			{
-				k--;
+				len--;
 				j = ft_strlen(set);
 			}
 		}
-		i++;
+		i--;
 	}
-	return (k);
+	return (len);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-	char			*r;
-	unsigned int	j;
-	unsigned int	isset;
-	unsigned int	k;
+	char		*r;
+	int			i;
+	size_t		j;
+	size_t		isset;
+	size_t		k;
 
-	k = strlen_without_set(s1, set);
+	k = strlen_b_trimmed(s1, set, strlen_f_trimmed(s1, set));
 	if (!(r = malloc((k + 1) * sizeof(char))))
 		return (NULL);
-	k = 0;
-	while (*s1 != 0)
+	isset = 1;
+	i = 0;
+	while (isset == 1)
 	{
 		j = 0;
 		isset = 0;
 		while (set[j] != 0 && isset == 0)
 		{
-			isset = (*s1 == set[j]) ? 1 : 0;
-			j += (*s1 != set[j]) ? 1 : 0;
+			isset = (s1[i] == set[j]) ? 1 : 0;
+			j += (s1[i] != set[j]) ? 1 : 0;
 		}
-		if (isset == 0)
-			r[k++] = *s1;
-		s1++;
+		i++;
 	}
+	r = ft_strncpy(r, &s1[i - 1], k);
 	r[k] = 0;
 	return (r);
 }

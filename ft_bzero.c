@@ -6,13 +6,13 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:02:36 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:02:39 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 10:12:40 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, unsigned int n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

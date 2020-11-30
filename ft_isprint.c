@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:44:58 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:45:14 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 11:05:45 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isprint(int c)
 {
-	if (31 < (unsigned char)c && (unsigned char)c < 127)
+	if (31 < c && c < 127)
 		return (1);
 	else
 		return (0);

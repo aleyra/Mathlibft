@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:43:37 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/25 13:37:01 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/30 09:45:55 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,5 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	atoi *= sign;
-	if (atoi > 2147483647)
-		atoi -= (2 * 2147483648);
-	else if (atoi < -2147483648)
-		atoi += (2 * 2147483648);
 	return (atoi);
 }

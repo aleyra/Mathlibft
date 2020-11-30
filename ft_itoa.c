@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/26 14:24:09 by lucille          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 11:29:36 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int		intlen(int n, long *i, long *m)
 	int	size;
 
 	size = (n < 0) ? 1 : 0;
-	*m = (n < 0) ? -n : n;
+	*m = n;
+	*m *= (n < 0) ? -1 : 1;
 	*i = 1;
 	if (n == 0)
 		size++;

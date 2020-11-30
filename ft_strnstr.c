@@ -3,38 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucille <lucille@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:46:37 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/26 09:43:40 by lucille          ###   ########.fr       */
+/*   Updated: 2020/11/30 09:47:38 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, unsigned int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char			*str;
-	char			*to_find;
-	char			*corr;
-
-	str = (char *)haystack;
-	to_find = (char *)needle;
-	if (to_find == 0)
-		return (str);
-	to_find = (char *)needle;
-	while (*str != 0 && ((unsigned int)ft_strlen(to_find) < len))
+	if (*needle == 0 || haystack == needle)
+		return ((char *)haystack);
+	while (*haystack != 0 && (ft_strlen(needle) < len--))
 	{
-		corr = (char *)str;
-		while (*corr == *to_find && *to_find != 0 && *corr != 0)
-		{
-			to_find++;
-			corr++;
-		}
-		if (*to_find == 0)
-			return (str);
+		if (ft_strncmp(needle, haystack, ft_strlen(needle)) == 0)
+			return ((char *)haystack);
 		else
-			str++;
+			haystack++;
 	}
 	return (NULL);
 }

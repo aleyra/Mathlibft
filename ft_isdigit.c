@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:20:56 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:21:08 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 11:04:42 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isdigit(int c)
 {
-	if ('0' <= (unsigned char)c && (unsigned char)c <= '9')
+	if ('0' <= c && c <= '9')
 		return (1);
 	else
 		return (0);

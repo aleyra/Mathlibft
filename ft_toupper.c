@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:45:34 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:48:32 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 11:06:46 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_toupper(int c)
 {
-	if ('a' <= (unsigned char)c && (unsigned char)c <= 'z')
+	if ('a' <= c && c <= 'z')
 		c -= 32;
 	return (c);
 }

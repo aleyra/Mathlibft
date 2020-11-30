@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:48:53 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 11:49:33 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 11:08:29 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_tolower(int c)
 {
-	if ('A' <= (unsigned char)c && (unsigned char)c <= 'A')
+	if ('A' <= c && c <= 'Z')
 		c += 32;
 	return (c);
 }

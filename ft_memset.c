@@ -6,15 +6,15 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:01:36 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/24 14:21:24 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/27 10:11:53 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, unsigned int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	i = 0;
