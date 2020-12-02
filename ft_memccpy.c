@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:10:39 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/30 11:05:25 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 17:00:56 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		*d++ = *s++;
 	}
-	if (*d == (unsigned char)c)
-		return (++d);
-	else
+	if (*s == (unsigned char)c)
 	{
 		*d = *s;
+		return (++d);
+	}
+	else
+	{
 		return (NULL);
 	}
 }
