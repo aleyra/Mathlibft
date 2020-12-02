@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/26 16:34:30 by lucille          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 10:55:50 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i] != 0)
 	{

@@ -6,13 +6,13 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:25:39 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/27 15:13:22 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 10:53:24 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strncpy(char *dest, const char *src, size_t n)
+static char		*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t i;
 
@@ -30,7 +30,7 @@ char		*ft_strncpy(char *dest, const char *src, size_t n)
 	return (dest);
 }
 
-size_t		strlen_f_trimmed(const char *s1, const char *set)
+static size_t	len_f_tri(const char *s1, const char *set)
 {
 	size_t		j;
 	size_t		len;
@@ -59,7 +59,7 @@ size_t		strlen_f_trimmed(const char *s1, const char *set)
 	return (len);
 }
 
-size_t		strlen_b_trimmed(const char *s1, const char *set, size_t len)
+static size_t	len_b_tri(const char *s1, const char *set, size_t len)
 {
 	size_t		i;
 	size_t		j;
@@ -88,31 +88,31 @@ size_t		strlen_b_trimmed(const char *s1, const char *set, size_t len)
 	return (len);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	char		*r;
-	int			i;
-	size_t		j;
+	int			i[2];
 	size_t		isset;
-	size_t		k;
 
-	k = strlen_b_trimmed(s1, set, strlen_f_trimmed(s1, set));
-	if (!(r = malloc((k + 1) * sizeof(char))))
+	if (!s1 || !set)
+		return (NULL);
+	if (!(r = malloc((len_b_tri(s1, set, len_f_tri(s1, set)) + 1) *
+					sizeof(char))))
 		return (NULL);
 	isset = 1;
-	i = 0;
+	i[0] = 0;
 	while (isset == 1)
 	{
-		j = 0;
+		i[1] = 0;
 		isset = 0;
-		while (set[j] != 0 && isset == 0)
+		while (set[i[1]] != 0 && isset == 0)
 		{
-			isset = (s1[i] == set[j]) ? 1 : 0;
-			j += (s1[i] != set[j]) ? 1 : 0;
+			isset = (s1[i[0]] == set[i[1]]) ? 1 : 0;
+			i[1] += (s1[i[0]] != set[i[1]]) ? 1 : 0;
 		}
-		i++;
+		i[0]++;
 	}
-	r = ft_strncpy(r, &s1[i - 1], k);
-	r[k] = 0;
+	r = ft_strncpy(r, &s1[i[0] - 1], len_b_tri(s1, set, len_f_tri(s1, set)));
+	r[len_b_tri(s1, set, len_f_tri(s1, set))] = 0;
 	return (r);
 }

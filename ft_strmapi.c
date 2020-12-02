@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/27 12:39:56 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 10:54:29 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			size_s;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	size_s = ft_strlen(s) + 1;
 	if (!(str = malloc(size_s * sizeof(char))))
 		return (NULL);

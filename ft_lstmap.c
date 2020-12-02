@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 15:03:31 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 10:42:23 by lburnet          ###   ########lyon.fr   */
+/*   Created: 2020/12/02 09:48:54 by lburnet           #+#    #+#             */
+/*   Updated: 2020/12/02 10:37:53 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_strcat(char *dest, const char *src)
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int i;
-	int j;
+	t_list		*l;
+	t_list		*new;
 
-	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
+	if (lst == NULL)
+		return (NULL);
+	l = malloc(sizeof(t_list));
+	if (!l)
+		return (NULL);
+	l = NULL;
+	while (lst != NULL)
 	{
-		dest[i + j] = src[j];
-		j++;
+		new = ft_lstnew(f(lst->content));
+		if (!new)
+		{
+			ft_lstclear(&l, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&l, new);
+		lst = lst->next;
 	}
-	dest[i + j] = 0;
-	return (dest);
-}
-
-char			*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*r;
-
-	if (!s1 || !s2)
-		return (NULL);
-	if (!(r = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char))))
-		return (NULL);
-	r[0] = 0;
-	ft_strcat(r, s1);
-	ft_strcat(r, s2);
-	r[ft_strlen(r)] = 0;
-	return (r);
+	return (l);
 }
