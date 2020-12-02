@@ -3,32 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucille <lucille@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 16:51:44 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 14:28:41 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 16:33:05 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static unsigned int		count_nb_of_str(char *str, char c)
 {
 	int nb_of_str;
 	int i;
 
-	nb_of_str = (str[0] != c) ? 1 : 0;
+	nb_of_str = 0;
 	i = 0;
-	while (str[i] == c)
-		i++;
-	while (str[i] != 0)
+	while (str[i])
 	{
-		if (str[i] != c && str[i - 1] == c)
-			nb_of_str++;
-		i++;
+		if (str[i] != c && ++nb_of_str)
+			while (str[i] && str[i] != c)
+				i++;
+		while (str[i] && str[i] == c)
+			i++;
 	}
-	if (nb_of_str == 0 && str[i - 1] != c)
-		nb_of_str++;
 	return (nb_of_str);
 }
 
@@ -37,7 +36,7 @@ static int				len_next_str(char *str, char c)
 	int j;
 
 	j = 0;
-	while (str[j] != c)
+	while (str[j] && str[j] != c)
 		j++;
 	return (j);
 }
@@ -66,7 +65,7 @@ char					**ft_split(const char *s, char c)
 	j = 0;
 	while (i < count_nb_of_str(str, c))
 	{
-		while (str[j] == c)
+		while (str[j] && str[j] == c)
 			j++;
 		strs[i] = ft_substr(str, j, len_next_str(&str[j], c));
 		if (strs[i] == NULL)

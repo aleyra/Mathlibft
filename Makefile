@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucille <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 13:39:23 by lucille           #+#    #+#              #
-#    Updated: 2020/12/02 09:49:38 by lburnet          ###   ########lyon.fr    #
+#    Updated: 2020/12/02 16:18:00 by lburnet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ LIB	= libft.h
 CC		= clang
 RM		= rm -rf
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g
 
 %.o: %.c $(LIB)
 		$(CC) $(CFLAGS) -c $< -o $@
