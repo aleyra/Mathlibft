@@ -6,13 +6,13 @@
 /*   By: lucille <lucille@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 16:51:44 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 14:16:37 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 14:28:41 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int		count_nb_of_str(const char *str, char c)
+static unsigned int		count_nb_of_str(char *str, char c)
 {
 	int nb_of_str;
 	int i;
@@ -32,7 +32,7 @@ static unsigned int		count_nb_of_str(const char *str, char c)
 	return (nb_of_str);
 }
 
-static int				len_next_str(const char *str, char c)
+static int				len_next_str(char *str, char c)
 {
 	int j;
 
@@ -55,22 +55,24 @@ char					**ft_split(const char *s, char c)
 	char			**strs;
 	unsigned int	i;
 	unsigned int	j;
+	char			*str;
 
 	if (!s)
 		return (NULL);
-	if (!(strs = malloc((count_nb_of_str(s, c) + 1) * sizeof(char *))))
+	str = (char *)s;
+	if (!(strs = malloc((count_nb_of_str(str, c) + 1) * sizeof(char *))))
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i < count_nb_of_str(s, c))
+	while (i < count_nb_of_str(str, c))
 	{
-		while (s[j] == c)
+		while (str[j] == c)
 			j++;
-		strs[i] = ft_substr(s, j, len_next_str(&s[j], c));
+		strs[i] = ft_substr(str, j, len_next_str(&str[j], c));
 		if (strs[i] == NULL)
 			return (free_all(strs, i));
 		i++;
-		j += len_next_str(&s[j], c);
+		j += len_next_str(&str[j], c);
 	}
 	strs[i] = NULL;
 	return (strs);
