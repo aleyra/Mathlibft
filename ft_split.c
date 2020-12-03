@@ -6,12 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 16:51:44 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 16:33:05 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 18:11:20 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static unsigned int		count_nb_of_str(char *str, char c)
 {

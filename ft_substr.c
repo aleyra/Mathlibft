@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:43:35 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/03 11:57:28 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 15:45:09 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	min(size_t v1, size_t v2)
 		return (v2);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*p;
 	char	*r;
