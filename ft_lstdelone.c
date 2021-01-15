@@ -6,7 +6,7 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 15:58:15 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/09 12:49:39 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/11/30 16:48:55 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (lst)
-	{
-		del(lst->content);
-		free(lst);
-	}
+	del(lst->content);
+	free(lst);
 }
