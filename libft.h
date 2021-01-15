@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/15 14:27:53 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/01/15 14:50:40 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ char				*decimal_to_hexa(int c, unsigned long long decimal);
 char				*ft_ulltoa(unsigned long long n);
 char				*strjoin_free(char *s1, char *s2);
 int					ft_strcmp(char *s1, char *s2);
+int					ft_charstr(char c, char *s);
 
 #endif
