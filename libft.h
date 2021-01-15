@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/15 13:12:12 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/01/15 13:16:18 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
 char				*decimal_to_hexa(int c, unsigned long long decimal);
 char				*ft_ulltoa(unsigned long long n);
-char				*ft_strjoin_free(char const *s1, char const *s2);
+char				*ft_strjoin_free(char *s1, char *s2);
 
 #endif

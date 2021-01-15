@@ -6,13 +6,13 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 13:08:45 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/15 13:11:32 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/01/15 13:16:16 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_strcat(char *dest, const char *src)
+static char		*ft_strcat(char *dest, char *src)
 {
 	int i;
 	int j;
@@ -30,7 +30,7 @@ static char		*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-char			*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin_free(char *s1, char *s2)
 {
 	char	*r;
 
