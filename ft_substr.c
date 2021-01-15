@@ -6,13 +6,13 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:43:35 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/03 15:45:09 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/09 12:49:10 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	min(size_t v1, size_t v2)
+static size_t	ft_min(size_t v1, size_t v2)
 {
 	if (v1 < 0)
 		return (v2);
@@ -33,7 +33,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		len = 0;
-	if (!(p = malloc((min(len, ft_strlen(s) - start) + 1) * sizeof(char))))
+	if (!(p = malloc((ft_min(len, ft_strlen(s) - start) + 1) * sizeof(char))))
 		return (NULL);
 	r = (char *)p;
 	while (start-- > 0 && *s != 0)

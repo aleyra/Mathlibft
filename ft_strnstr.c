@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:46:37 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/07 12:10:52 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2020/12/09 12:50:08 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (!needle[i])
 		return ((char *)haystack);
-	while (haystack[i] && i < len)
+	while (i < len && haystack[i])
 	{
 		j = 0;
 		if (haystack[i] == needle[j])
