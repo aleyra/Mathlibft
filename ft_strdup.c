@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"//
 
 static char		*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
 	i = 0;
-	while (src[i])
+	while (src && src[i])
 	{
 		dest[i] = src[i];
 		i++;
