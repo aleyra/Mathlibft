@@ -6,7 +6,7 @@
 #    By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 13:39:23 by lucille           #+#    #+#              #
-#    Updated: 2021/01/19 10:39:53 by lburnet          ###   ########lyon.fr    #
+#    Updated: 2021/01/19 11:31:31 by lburnet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,13 +29,13 @@ SRCS_MEM	=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy
 SRCS_TYPE	=	ft_atoi.c ft_itoa.c ft_ulltoa.c 
 SRCS_BASE	=	decimal_to_hexa.c 
 SRCS_LIST	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-SRCS		=	$(addprefix $(PATH_SRC)/display/, $(SRCS_DISP)) \
-				$(addprefix $(PATH_SRC)/string/, $(SRCS_STR)) \
-				$(addprefix $(PATH_SRC)/character/, $(SRCS_CHAR)) \
-				$(addprefix $(PATH_SRC)/memory/, $(SRCS_MEM)) \
-				$(addprefix $(PATH_SRC)/type_changing/, $(SRCS_TYPE)) \
-				$(addprefix $(PATH_SRC)/base_changing/, $(SRCS_BASE)) \
-				$(addprefix $(PATH_SRC)/list/, $(SRCS_LIST))
+SRCS		=	$(addprefix $(PATH_SRCS)/display/, $(SRCS_DISP)) \
+				$(addprefix $(PATH_SRCS)/string/, $(SRCS_STR)) \
+				$(addprefix $(PATH_SRCS)/character/, $(SRCS_CHAR)) \
+				$(addprefix $(PATH_SRCS)/memory/, $(SRCS_MEM)) \
+				$(addprefix $(PATH_SRCS)/type_changing/, $(SRCS_TYPE)) \
+				$(addprefix $(PATH_SRCS)/base_changing/, $(SRCS_BASE)) \
+				$(addprefix $(PATH_SRCS)/list/, $(SRCS_LIST))
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(notdir $(SRCS:.c=.o)))
 INCS		=	$(addprefix $(PATH_INC)/, libft.h)
 
@@ -64,13 +64,13 @@ init:
 $(NAME): $(OBJS) $(INCS)
 	@ ar rcs $(NAME) $(OBJS)
 
-$(PATH_OBJ)/%.o : $(PATH_SRC)/*/%.c  $(INCS)
+$(PATH_OBJ)/%.o : $(PATH_SRCS)/*/%.c  $(INCS)
 	@ $(COMP) $(COMP_FLAG) $(COMP_ADD) -c $< -o $@
 	@ echo "$(_INFO) Compilation of $*"
 
-#$(PATH_OBJ)/%.o : $(PATH_SRC)/%.c  $(INCS)
-#	@ $(COMP) $(COMP_FLAG) $(COMP_ADD) -c $< -o $@
-#	@ echo "$(_INFO) Compilation of $*"
+# $(PATH_OBJ)/%.o : $(PATH_SRCS)/%.c  $(INCS)
+# 	@ $(COMP) $(COMP_FLAG) $(COMP_ADD) -c $< -o $@
+# 	@ echo "$(_INFO) Compilation of $*"
 
 clean:
 	@ $(RM) -rf $(PATH_OBJ)
