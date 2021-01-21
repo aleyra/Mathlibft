@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 14:39:55 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/21 13:42:12 by lburnet          ###   ########lyon.fr   */
+/*   Created: 2020/10/11 09:43:27 by lburnet           #+#    #+#             */
+/*   Updated: 2021/01/21 13:41:09 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "stdio.h"//
+#include <unistd.h>
 
-char			*ft_strdup(const char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	char		*str;
-	size_t		len_src;
+	int i;
 
-	len_src = ft_strlen(src) + 1;
-	if (!(str = (char *)malloc(len_src * sizeof(char))))
-		return (NULL);
-	ft_strcpy(str, src);
-	if (str[len_src - 1] == 0)
-		return (str);
-	else
-		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (dest);
 }
