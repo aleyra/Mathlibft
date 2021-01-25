@@ -11,20 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"//
 
 int		ull_len(unsigned long long n, unsigned long long *i)
 {
 	int	size;
 
-	size = (n < 0) ? 1 : 0;
+	size = 0;
 	*i = 1;
-	if (n == 0)
+	if (n < 1)
 		size++;
-	while (*i < n)
+	while (*i <= n)
 	{
 		*i *= 10;
 		size++;
 	}
+//	printf("size = %d\n", size);//
 	return (size);
 }
 
@@ -35,14 +37,19 @@ char	*ft_ulltoa(unsigned long long n)
 	unsigned long long		i;
 	int						j;
 
+//	printf("n = %llu\n", n);//
 	size = ull_len(n, &i);
+//	printf("size = %d et i = %llu\n", size, i);//
 	if (!(ulltoa = malloc((size + 1) * sizeof(char))))
 		return (NULL);
 	i /= 10;
+//	printf("size = %d et i = %llu\n", size, i);//
 	j = 0;
 	while (i > 1)
 	{
-		ulltoa[j++] = '0' + n / i;
+		ulltoa[j] = '0' + n / i;
+//		printf("ulltoa[%d] = %c et n / i = %llu\n", j, ulltoa[j], n / i);//
+		j++;
 		n %= i;
 		i /= 10;
 	}
