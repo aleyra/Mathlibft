@@ -6,12 +6,11 @@
 /*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:39:55 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/21 13:42:12 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/01/22 17:21:12 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"//
 
 char			*ft_strdup(const char *src)
 {
