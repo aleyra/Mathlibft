@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/21 13:39:13 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/02/17 10:09:14 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,15 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
 char				*decimal_to_hexa(int c, unsigned long long decimal);
 char				*ft_ulltoa(unsigned long long n);
-char				*strjoin_free(char *s1, char *s2);
+char				*strjoin_free(char *s1, char *s2, int n);
 int					ft_strcmp(char *s1, char *s2);
 int					ft_charstr(char c, char *s);
 char				*ft_strcpy(char *dest, const char *src);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
+
+int			get_next_line(int fd, char **line);
 
 #endif

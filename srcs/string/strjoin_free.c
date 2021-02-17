@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strjoin_free.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 13:08:45 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/15 14:28:44 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/02/17 10:09:04 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char		*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-char			*strjoin_free(char *s1, char *s2)
+char			*strjoin_free(char *s1, char *s2, int n)
 {
 	char	*r;
 
@@ -42,9 +42,9 @@ char			*strjoin_free(char *s1, char *s2)
 	ft_strcat(r, s1);
 	ft_strcat(r, s2);
 	r[ft_strlen(r)] = 0;
-	if (s1)
+	if (n == 1 || n == 3)
 		free(s1);
-	if (s2)
+	if (n > 1)
 		free(s2);
 	return (r);
 }
