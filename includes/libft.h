@@ -6,7 +6,7 @@
 /*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/02/17 10:09:14 by lucille          ###   ########lyon.fr   */
+/*   Updated: 2021/02/17 17:26:12 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ char				*ft_strcpy(char *dest, const char *src);
 # endif
 
 int			get_next_line(int fd, char **line);
+char		**split_fd_to_tabline(int fd);
 
 #endif

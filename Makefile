@@ -6,7 +6,7 @@
 #    By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 13:39:23 by lucille           #+#    #+#              #
-#    Updated: 2021/02/17 11:42:27 by lucille          ###   ########lyon.fr    #
+#    Updated: 2021/02/17 17:27:26 by lucille          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRCS_MEM	=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy
 SRCS_TYPE	=	ft_atoi.c ft_itoa.c ft_ulltoa.c
 SRCS_BASE	=	decimal_to_hexa.c 
 SRCS_LIST	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-SRCS_FILE	=	get_next_line.c
+SRCS_FILE	=	get_next_line.c split_fd_to_tabline.c
 SRCS		=	$(addprefix $(PATH_SRCS)/display/, $(SRCS_DISP)) \
 				$(addprefix $(PATH_SRCS)/string/, $(SRCS_STR)) \
 				$(addprefix $(PATH_SRCS)/character/, $(SRCS_CHAR)) \
