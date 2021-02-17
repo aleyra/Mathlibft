@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   decimal_to_hexa.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:02:30 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/19 16:05:05 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/02/17 10:49:21 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ char			*decimal_to_hexa(int c, unsigned long long decimal)
 	int		size;
 	char	*str;
 
-	(c >= 'a' && c <= 'z') ? base = ft_strdup("0123456789abcdef") : 0;
-	(c >= 'A' && c <= 'Z') ? base = ft_strdup("0123456789ABCDEF") : 0;
-	if (!base)
-		return (NULL);
+	if (c >= 'a' && c <= 'z')
+		base = "0123456789abcdef";
+	if (c >= 'A' && c <= 'Z')
+		base = "0123456789ABCDEF";
 	if (decimal == 0)
 	{
 		size = 2;
@@ -67,6 +67,5 @@ char			*decimal_to_hexa(int c, unsigned long long decimal)
 		nb_to_hexa(decimal, str, base, size - 2);
 	}
 	str[size - 1] = 0;
-	free(base);
 	return (str);
 }

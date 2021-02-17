@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 15:47:02 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/02/17 11:30:41 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ static int		intlen(int n, long *m)
 	int		size;
 	long	t;
 
-	size = (n < 0) ? 1 : 0;
+	size = 0;
+	if (n < 0)
+		size = 1;
 	*m = n;
-	*m *= (n < 0) ? -1 : 1;
+	if (n < 0)
+		*m *= -1;
 	t = *m;
 	if (n == 0)
 		return (1);
