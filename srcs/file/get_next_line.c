@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 10:04:15 by lucille           #+#    #+#             */
-/*   Updated: 2021/03/03 15:58:50 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 16:33:24 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ static int	ret_gnl(int ret_i[2], char **line, char *t, char **leftover)
 	return (1);
 }
 
-static void	init_ret_i(int **ret_i)
+static void	init_ret_(int (*ret_i)[2]*)
 {
-	*ret_i[0] = BUFFER_SIZE;
-	*ret_i[1] = -1;
+	(*ret_i)[0] = BUFFER_SIZE;
+	(*ret_i)[1] = -1;
 }
 
 int	get_next_line(int fd, char **line)
