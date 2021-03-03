@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/30 12:02:08 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 15:49:39 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		nb_to_tab(long *nbt, long *tab)
+static void	nb_to_tab(long *nbt, long *tab)
 {
 	int		i;
 	int		j;
@@ -34,7 +34,7 @@ static void		nb_to_tab(long *nbt, long *tab)
 	}
 }
 
-void			ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbt;
 	long	tab[10];
