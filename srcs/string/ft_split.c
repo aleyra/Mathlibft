@@ -6,16 +6,16 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 16:51:44 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 18:11:20 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 16:08:03 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int		count_nb_of_str(char *str, char c)
+static unsigned int	count_nb_of_str(char *str, char c)
 {
-	int nb_of_str;
-	int i;
+	int	nb_of_str;
+	int	i;
 
 	nb_of_str = 0;
 	i = 0;
@@ -30,9 +30,9 @@ static unsigned int		count_nb_of_str(char *str, char c)
 	return (nb_of_str);
 }
 
-static int				len_next_str(char *str, char c)
+static int	len_next_str(char *str, char c)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	while (str[j] && str[j] != c)
@@ -40,7 +40,7 @@ static int				len_next_str(char *str, char c)
 	return (j);
 }
 
-static char				**free_all(char **strs, int i)
+static char	**free_all(char **strs, int i)
 {
 	while (i-- > 0)
 		free(strs[i]);
@@ -48,7 +48,7 @@ static char				**free_all(char **strs, int i)
 	return (NULL);
 }
 
-char					**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char			**strs;
 	unsigned int	i;
@@ -58,7 +58,8 @@ char					**ft_split(const char *s, char c)
 	if (!s)
 		return (NULL);
 	str = (char *)s;
-	if (!(strs = malloc((count_nb_of_str(str, c) + 1) * sizeof(char *))))
+	strs = malloc((count_nb_of_str(str, c) + 1) * sizeof(char *));
+	if (!(strs))
 		return (NULL);
 	i = 0;
 	j = 0;

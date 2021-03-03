@@ -6,15 +6,15 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 14:49:42 by lburnet           #+#    #+#             */
-/*   Updated: 2021/01/15 14:50:06 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 16:08:26 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_charstr(char c, char *s)
+int	ft_charstr(char c, char *s)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (s[++i])

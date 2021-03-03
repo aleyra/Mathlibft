@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:43:35 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/03 15:45:09 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 16:13:33 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	min(size_t v1, size_t v2)
 		return (v2);
 }
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*p;
 	char	*r;
@@ -33,7 +33,8 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		len = 0;
-	if (!(p = malloc((min(len, ft_strlen(s) - start) + 1) * sizeof(char))))
+	p = malloc((min(len, ft_strlen(s) - start) + 1) * sizeof(char));
+	if (!(p))
 		return (NULL);
 	r = (char *)p;
 	while (start-- > 0 && *s != 0)

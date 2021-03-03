@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 10:36:00 by lburnet           #+#    #+#             */
-/*   Updated: 2020/11/27 12:33:35 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 16:12:50 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *p;
-	char *lp;
+	char	*p;
+	char	*lp;
 
 	p = (char *)s;
 	lp = NULL;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2020/12/02 10:54:29 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 16:11:27 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	size_s = ft_strlen(s) + 1;
-	if (!(str = malloc(size_s * sizeof(char))))
+	str = malloc(size_s * sizeof(char));
+	if (!(str))
 		return (NULL);
 	i = 0;
 	while (s[i] != 0)
