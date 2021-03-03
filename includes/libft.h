@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/02/17 17:26:12 by lucille          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 11:25:04 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -78,7 +78,7 @@ char				*ft_strcpy(char *dest, const char *src);
 #  define BUFFER_SIZE 32
 # endif
 
-int			get_next_line(int fd, char **line);
-char		**split_fd_to_tabline(int fd);
+int					get_next_line(int fd, char **line);
+char				**split_fd_to_tabline(int fd);
 
 #endif
