@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_contains(char needle, const char *haystack)
 {
