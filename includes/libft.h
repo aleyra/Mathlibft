@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/03 11:25:04 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/03 15:46:18 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
-char				*ft_strnstr(const char *haystack,
-		const char *needle, size_t len);
+char				*ft_strnstr(const char *haystack
+		, const char *needle, size_t len);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *src);
@@ -45,8 +45,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(const char *s, char c);
 char				*ft_itoa(int n);
-char				*ft_strmapi(char const *s,
-		char (*f)(unsigned int, char));
+char				*ft_strmapi(char const *s
+		, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
@@ -65,8 +65,8 @@ void				ft_lstadd_back(t_list **alst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-		void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *)
+		, void (*del)(void *));
 char				*decimal_to_hexa(int c, unsigned long long decimal);
 char				*ft_ulltoa(unsigned long long n);
 char				*strjoin_free(char *s1, char *s2, int n);
