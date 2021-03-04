@@ -6,7 +6,7 @@
 #    By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 13:39:23 by lucille           #+#    #+#              #
-#    Updated: 2021/02/17 17:27:26 by lucille          ###   ########lyon.fr    #
+#    Updated: 2021/03/04 10:03:56 by lucille          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRCS		=	$(addprefix $(PATH_SRCS)/display/, $(SRCS_DISP)) \
 				$(addprefix $(PATH_SRCS)/type_changing/, $(SRCS_TYPE)) \
 				$(addprefix $(PATH_SRCS)/base_changing/, $(SRCS_BASE)) \
 				$(addprefix $(PATH_SRCS)/list/, $(SRCS_LIST)) \
-				$(addprefix $(PATH_SRCS)/file/, $(SRCS_OTHER))
+				$(addprefix $(PATH_SRCS)/file/, $(SRCS_FILE))
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(notdir $(SRCS:.c=.o)))
 INCS		=	$(addprefix $(PATH_INC)/, libft.h)
 

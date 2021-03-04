@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   decimal_to_hexa.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:02:30 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/03 15:44:34 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/04 10:02:28 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,20 +53,16 @@ char	*decimal_to_hexa(int c, unsigned long long decimal)
 	if (c >= 'A' && c <= 'Z')
 		base = "0123456789ABCDEF";
 	if (decimal == 0)
-	{
-		str = (char *)malloc(2 * sizeof(char));
-		if (!str)
-			return (NULL);
-		str[0] = '0';
-	}
+		size = 1;
 	else
-	{
-		size = size_in_hexa(decimal) + 1;
-		str = (char *)malloc(size * sizeof(char));
-		if (!str)
-			return (NULL);
-		nb_to_hexa(decimal, str, base, size - 2);
-	}
-	str[size - 1] = 0;
+		size = size_in_hexa(decimal);
+	str = (char *)malloc((size + 1)* sizeof(char));
+	if (!str)
+		return (NULL);
+	if (decimal == 0)
+		str[0] = '0';
+	else
+		nb_to_hexa(decimal, str, base, size - 1);
+	str[size] = 0;
 	return (str);
 }
