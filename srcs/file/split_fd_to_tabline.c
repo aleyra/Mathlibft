@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   split_fd_to_tabline.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 14:53:58 by lucille           #+#    #+#             */
-/*   Updated: 2021/03/03 16:00:00 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/04 10:09:00 by lucille          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static char	**tabline_addline(char **otl, char **line, int n_line)
 char	**split_fd_to_tabline(int fd)
 {
 	char	**tl;
-	int		i;
 	int		n_line;
 	char	*line;
 
