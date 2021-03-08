@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 11:16:19 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/03 11:24:13 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/08 10:07:14 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 # define MATHS3D_H
 
 # include "math.h"
-
-typedef struct s_pt3d
-{
-	float	x;
-	float	y;
-	float	z;
-}			t_pt3d;
 
 typedef struct s_vec3
 {
