@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ulltoa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:02:22 by lburnet           #+#    #+#             */
-/*   Updated: 2021/02/17 10:27:46 by lucille          ###   ########lyon.fr   */
+/*   Updated: 2021/03/08 10:14:03 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ull_len(unsigned long long n, unsigned long long *i)
+int	ull_len(unsigned long long n, unsigned long long *i)
 {
 	int	size;
 
@@ -36,7 +36,8 @@ char	*ft_ulltoa(unsigned long long n)
 	int						j;
 
 	size = ull_len(n, &i);
-	if (!(ulltoa = malloc((size + 1) * sizeof(char))))
+	ulltoa = malloc((size + 1) * sizeof(char));
+	if (!(ulltoa))
 		return (NULL);
 	i /= 10;
 	j = 0;

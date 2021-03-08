@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:40:38 by lburnet           #+#    #+#             */
-/*   Updated: 2021/02/17 11:30:41 by lucille          ###   ########lyon.fr   */
+/*   Updated: 2021/03/08 10:13:35 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		intlen(int n, long *m)
+static int	intlen(int n, long *m)
 {
 	int		size;
 	long	t;
@@ -34,7 +34,7 @@ static int		intlen(int n, long *m)
 	return (size);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*itoa;
 	int		size;
@@ -42,7 +42,8 @@ char			*ft_itoa(int n)
 	int		j;
 
 	size = intlen(n, &m);
-	if (!(itoa = malloc((size + 1) * sizeof(char))))
+	itoa = malloc((size + 1) * sizeof(char));
+	if (!(itoa))
 		return (NULL);
 	if (m == 0)
 		itoa[size - 1] = '0';
