@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucille <lucille@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 13:39:23 by lucille           #+#    #+#              #
-#    Updated: 2021/03/04 10:03:56 by lucille          ###   ########lyon.fr    #
+#    Updated: 2021/03/10 16:08:14 by lburnet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS_TYPE	=	ft_atoi.c ft_itoa.c ft_ulltoa.c
 SRCS_BASE	=	decimal_to_hexa.c 
 SRCS_LIST	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 SRCS_FILE	=	get_next_line.c split_fd_to_tabline.c
+SRCS_MATHS	=	conv_deg_rad.c plane3d.c rotation3d.c some_calc.c some_calc3d.c sphere3d.c triangle3d.c square3d.c cylinder3d.c
 SRCS		=	$(addprefix $(PATH_SRCS)/display/, $(SRCS_DISP)) \
 				$(addprefix $(PATH_SRCS)/string/, $(SRCS_STR)) \
 				$(addprefix $(PATH_SRCS)/character/, $(SRCS_CHAR)) \
@@ -37,7 +38,8 @@ SRCS		=	$(addprefix $(PATH_SRCS)/display/, $(SRCS_DISP)) \
 				$(addprefix $(PATH_SRCS)/type_changing/, $(SRCS_TYPE)) \
 				$(addprefix $(PATH_SRCS)/base_changing/, $(SRCS_BASE)) \
 				$(addprefix $(PATH_SRCS)/list/, $(SRCS_LIST)) \
-				$(addprefix $(PATH_SRCS)/file/, $(SRCS_FILE))
+				$(addprefix $(PATH_SRCS)/file/, $(SRCS_FILE)) \
+				$(addprefix $(PATH_SRCS)/file/, $(SRCS_MATHS))
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(notdir $(SRCS:.c=.o)))
 INCS		=	$(addprefix $(PATH_INC)/, libft.h)
 
