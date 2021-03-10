@@ -6,17 +6,17 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/10 16:09:28 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/10 16:18:59 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "maths3d.h"
 
-float	norme_vec3_power2(t_vec3 a, t_vec3 b)
+float	norme_vec3_power2(t_vec3 a)
 {
 	float	n;
 
-	n = a.x * b.x + a.y * b.y + a.z * b.z;
+	n = a.x * a.x + a.y * a.y + a.z * a.z;
 	return (n);
 }
 
