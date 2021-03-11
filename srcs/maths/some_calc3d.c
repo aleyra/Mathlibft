@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/10 16:18:59 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/11 13:27:39 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,17 @@ t_vec3	sum_alg_2vec3(float l, t_vec3 v, float m, t_vec3 u)
 	return (lvpmu);
 }
 
+float	angle_vec3v_vec3u(t_vec3 v, t_vec3 u)
+{
+	float	rad;
+
+	rad = acos((norme_vec3_power2(sum_alg_2vec3(
+						1, v, 1, u)) - norme_vec3_power2(
+					v) - norme_vec3_power2(u)) * (0.5 * Q_rsqrt(
+					norme_vec3_power2(v)) * Q_rsqrt(norme_vec3_power2(u))));
+	return (rad);
+}
+
 int	in_angular_sector(t_vec3 a, t_vec3 b, t_vec3 c, t_vec3 p)
 {
 	float	abac;
@@ -51,14 +62,8 @@ int	in_angular_sector(t_vec3 a, t_vec3 b, t_vec3 c, t_vec3 p)
 	ab = vec3_from_2pts(a, b);
 	ac = vec3_from_2pts(a, c);
 	ap = vec3_from_2pts(a, p);
-	abac = acos((norme_vec3_power2(sum_alg_2vec3(
-						1, ab, 1, ac)) - norme_vec3_power2(
-					ab) - norme_vec3_power2(ac)) * (0.5 * Q_rsqrt(
-					norme_vec3_power2(ab)) * Q_rsqrt(norme_vec3_power2(ac))));
-	abap = acos((norme_vec3_power2(sum_alg_2vec3(
-						1, ab, 1, ap)) - norme_vec3_power2(
-					ab) - norme_vec3_power2(ap)) * (0.5 * Q_rsqrt(
-					norme_vec3_power2(ab)) * Q_rsqrt(norme_vec3_power2(ap))));
+	abac = angle_vec3v_vec3u(ab, ac);
+	abap = angle_vec3v_vec3u(ab, ap);
 	if (abac >= abap)
 		return (1);
 	else

@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 11:16:19 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/10 16:19:13 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/11 13:28:08 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		rad_to_deg(float	r);
 float	norme_vec3_power2(t_vec3 a);
 t_vec3	vec3_from_2pts(t_vec3 a, t_vec3 b);
 t_vec3	sum_alg_2vec3(float l, t_vec3 v, float m, t_vec3 u);
+float	angle_vec3v_vec3u(t_vec3 v, t_vec3 u);
 int		in_angular_sector(t_vec3 a, t_vec3 b, t_vec3 c, t_vec3 p);
 t_vec3	rotation_around_x(t_vec3 v, float rad);
 t_vec3	rotation_around_y(t_vec3 v, float rad);

@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 11:27:47 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/10 16:03:56 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/11 13:10:19 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,3 @@ t_vec3	normal_of_tr(t_vec3 a, t_vec3 b, t_vec3 c)
 	return (n);
 } 
 
-int	in_triangle(/*infos tr + pt*/)
-{
-if (in_plane(/* 1pt du tr + n du tr + pt*/) == -1)
-	return (-1);
-if (!(in_angular_sector(/*pts du tr + pt*/) == 1 && in_angular_sector(
-	/*pts du tr ds 1 autre ordre + pt*/) == 1))
-	return (-1);
-return (1);
-}
