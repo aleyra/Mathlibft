@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_deg_rad.c                                     :+:      :+:    :+:   */
+/*   conversions.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 10:49:07 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/10 16:12:53 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/17 10:31:35 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,20 @@ int	rad_to_deg(float r)
 		r += 2.0f * M_PI;
 	d = 180.0f * r / M_PI;
 	return (round(d));
+}
+
+float	angle_one_polaris(t_vec3 v)
+{
+	float	r;
+
+	r = acos(v.z * Q_rsqrt(norme_vec3_power2(v)));
+	return (r);
+}
+
+float	angle_two_polaris(t_vec3 v)
+{
+	float	r;
+
+	r = atan(v.y * Q_rsqrt(x * x));
+	return (r);
 }
