@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 11:16:19 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/17 10:31:48 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/18 13:42:24 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,9 @@ int		check_not_aligned(t_vec3 a, t_vec3 b, t_vec3 c);
 t_vec3	normal_of_tr(t_vec3 a, t_vec3 b, t_vec3 c);
 float	angle_one_polaris(t_vec3 v);
 float	angle_two_polaris(t_vec3 v);
+void	init_t_vec3_to_0(t_vec3 *org);
+void	init_tvec3_to_1x(t_vec3 *i);
+void	init_tvec3_to_1y(t_vec3 *j);
+void	init_tvec_to_1z(t_vec3 *k);
 
 #endif
