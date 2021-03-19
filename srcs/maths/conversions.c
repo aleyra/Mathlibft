@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 10:49:07 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/19 13:44:36 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/19 13:55:32 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ float	angle_one_polaris(t_vec3 *v)
 {
 	float	r;
 
-	r = acos(v->z * Q_rsqrt(norme_vec3_power2(v)));
+	r = acos(v->z * Q_rsqrt(norme_vec3_power2(*v)));
 	return (r);
 }
 
