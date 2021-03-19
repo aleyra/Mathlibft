@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sphere3d.c                                         :+:      :+:    :+:   */
+/*   fi_iswhitespace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/10 14:01:41 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 14:12:01 by lburnet          ###   ########lyon.fr   */
+/*   Created: 2021/03/19 10:03:06 by lburnet           #+#    #+#             */
+/*   Updated: 2021/03/19 10:10:34 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
-int	on_sphere(t_vec3 *o, float d, t_vec3 *p)
+int	ft_iswhitespace(int c)
 {
-	float	eq;
-
-	eq = pow((p->x - o->x), 2) + pow((p->y - o->y), 2) + pow(
-			(p->z - o->z), 2) - pow(d * 0.5f, 2);
-	return (eq <= 0.001f && eq >= -0.001f);
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == ' ')
+		return (1);
+	return (0);
 }

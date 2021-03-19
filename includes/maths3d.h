@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 11:16:19 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 13:42:24 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/18 14:14:35 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,23 @@ typedef struct s_vec3
 float	Q_rsqrt(float number);
 float	deg_to_rad(int d);
 int		rad_to_deg(float	r);
-float	norme_vec3_power2(t_vec3 a);
-t_vec3	vec3_from_2pts(t_vec3 a, t_vec3 b);
-t_vec3	sum_alg_2vec3(float l, t_vec3 v, float m, t_vec3 u);
-float	angle_vec3v_vec3u(t_vec3 v, t_vec3 u);
-int		in_angular_sector(t_vec3 a, t_vec3 b, t_vec3 c, t_vec3 p);
-t_vec3	rotation_around_x(t_vec3 v, float rad);
-t_vec3	rotation_around_y(t_vec3 v, float rad);
-t_vec3	rotation_around_z(t_vec3 v, float rad);
-int		in_plane(t_vec3 o, t_vec3 n, t_vec3 p);
-int		on_sphere(t_vec3 o, float d, t_vec3 p);
-int		check_not_aligned(t_vec3 a, t_vec3 b, t_vec3 c);
-t_vec3	normal_of_tr(t_vec3 a, t_vec3 b, t_vec3 c);
-float	angle_one_polaris(t_vec3 v);
-float	angle_two_polaris(t_vec3 v);
-void	init_t_vec3_to_0(t_vec3 *org);
+float	norme_vec3_power2(t_vec3 *a);
+t_vec3	vec3_from_2pts(t_vec3 *a, t_vec3 *b);
+t_vec3	sum_alg_2vec3(float l, t_vec3 *v, float m, t_vec3 *u);
+float	angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u);
+int		in_angular_sector(t_vec3 *a, t_vec3 *b, t_vec3 *c, t_vec3 *p);
+t_vec3	rotation_around_x(t_vec3 *v, float rad);
+t_vec3	rotation_around_y(t_vec3 *v, float rad);
+t_vec3	rotation_around_z(t_vec3 *v, float rad);
+int		in_plane(t_vec3 *o, t_vec3 *n, t_vec3 *p);
+int		on_sphere(t_vec3 *o, float d, t_vec3 *p);
+int		check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c);
+t_vec3	normal_of_tr(t_vec3 *a, t_vec3 *b, t_vec3 *c);
+float	angle_one_polaris(t_vec3 *v);
+float	angle_two_polaris(t_vec3 *v);
+void	init_tvec3_to_0(t_vec3 *org);
 void	init_tvec3_to_1x(t_vec3 *i);
 void	init_tvec3_to_1y(t_vec3 *j);
-void	init_tvec_to_1z(t_vec3 *k);
+void	init_tvec3_to_1z(t_vec3 *k);
 
 #endif
