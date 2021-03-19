@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/19 10:19:59 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/19 13:15:21 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 
+char				*build_str(char *s1, char c);
 int					ft_charstr(char c, char *s);
 char				**ft_split(const char *s, char c);
 char				*ft_strchr(const char *s, int c);
