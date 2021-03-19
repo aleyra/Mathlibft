@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 10:49:07 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/17 10:31:35 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/19 13:44:36 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ float	deg_to_rad(int d)
 {
 	float	r;
 
-	d = d % 360.0f;
+	d = d % 360;
 	r = d * M_PI / 180.0f;
 	return (r);
 }
@@ -33,18 +33,18 @@ int	rad_to_deg(float r)
 	return (round(d));
 }
 
-float	angle_one_polaris(t_vec3 v)
+float	angle_one_polaris(t_vec3 *v)
 {
 	float	r;
 
-	r = acos(v.z * Q_rsqrt(norme_vec3_power2(v)));
+	r = acos(v->z * Q_rsqrt(norme_vec3_power2(v)));
 	return (r);
 }
 
-float	angle_two_polaris(t_vec3 v)
+float	angle_two_polaris(t_vec3 *v)
 {
 	float	r;
 
-	r = atan(v.y * Q_rsqrt(x * x));
+	r = atan(v->y * Q_rsqrt(v->x * v->x));
 	return (r);
 }

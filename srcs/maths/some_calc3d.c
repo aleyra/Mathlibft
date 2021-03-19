@@ -6,17 +6,17 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 14:11:12 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/19 13:49:35 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "maths3d.h"
 
-float	norme_vec3_power2(t_vec3 *a)
+float	norme_vec3_power2(t_vec3 a)
 {
 	float	n;
 
-	n = a->x * a->x + a->y * a->y + a->z * a->z;
+	n = a.x * a.x + a.y * a.y + a.z * a.z;
 	return (n);
 }
 
@@ -46,8 +46,8 @@ float	angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u)
 
 	rad = acos((norme_vec3_power2(sum_alg_2vec3(
 						1, v, 1, u)) - norme_vec3_power2(
-					v) - norme_vec3_power2(u)) * (0.5 * Q_rsqrt(
-					norme_vec3_power2(v)) * Q_rsqrt(norme_vec3_power2(u))));
+					*v) - norme_vec3_power2(*u)) * (0.5 * Q_rsqrt(
+					norme_vec3_power2(*v)) * Q_rsqrt(norme_vec3_power2(*u))));
 	return (rad);
 }
 
@@ -62,8 +62,8 @@ int	in_angular_sector(t_vec3 *a, t_vec3 *b, t_vec3 *c, t_vec3 *p)
 	ab = vec3_from_2pts(a, b);
 	ac = vec3_from_2pts(a, c);
 	ap = vec3_from_2pts(a, p);
-	abac = angle_vec3v_vec3u(ab, ac);
-	abap = angle_vec3v_vec3u(ab, ap);
+	abac = angle_vec3v_vec3u(&ab, &ac);
+	abap = angle_vec3v_vec3u(&ab, &ap);
 	if (abac >= abap)
 		return (1);
 	else
