@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/19 13:15:21 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/22 15:57:51 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/* Base changing ************************************************************ */
 char				*decimal_to_hexa(int c, unsigned long long decimal);
 
+/* Character **************************************************************** */
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
@@ -26,16 +28,19 @@ int					ft_iswhitespace(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
+/* Display ****************************************************************** */
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+/* File ********************************************************************* */
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 32
 # endif
 int					get_next_line(int fd, char **line);
 
+/* List ********************************************************************* */
 typedef struct s_list
 {
 	void			*content;
@@ -52,6 +57,7 @@ t_list				*ft_lstmap(
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
 
+/* Memory ******************************************************************* */
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -61,6 +67,9 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 
+/* Maths : see maths3d.h **************************************************** */
+
+/* String ******************************************************************* */
 char				*build_str(char *s1, char c);
 int					ft_charstr(char c, char *s);
 char				**ft_split(const char *s, char c);
@@ -82,6 +91,7 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*strjoin_free(char *s1, char *s2, int n);
 
+/* Type changing ************************************************************ */
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_ulltoa(unsigned long long n);
