@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/26 13:06:44 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:54:45 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <math.h>
 
 /* Base changing ************************************************************ */
 char				*decimal_to_hexa(int c, unsigned long long decimal);
@@ -122,7 +123,7 @@ char				*strjoin_free(char *s1, char *s2, int n);
 
 /* Type changing ************************************************************ */
 int					can_atof(const char *str);
-float				ft_atof(const char *str);
+double				ft_atod(const char *str);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_ulltoa(unsigned long long n);
