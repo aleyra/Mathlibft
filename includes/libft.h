@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/22 15:57:51 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:06:44 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,36 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 
-/* Maths : see maths3d.h **************************************************** */
+/* Maths : ****************************************************************** */
+typedef struct s_vec3
+{
+	float	x;
+	float	y;
+	float	z;
+}			t_vec3;
+
+float				deg_to_rad(int d);
+int					rad_to_deg(float	r);
+float				angle_one_polaris(t_vec3 *v);
+float				angle_two_polaris(t_vec3 *v);
+void				init_tvec3_to_0(t_vec3 *org);
+void				init_tvec3_to_1x(t_vec3 *i);
+void				init_tvec3_to_1y(t_vec3 *j);
+void				init_tvec3_to_1z(t_vec3 *k);
+int					in_plane(t_vec3 *o, t_vec3 *n, t_vec3 *p);
+t_vec3				rotation_around_x(t_vec3 v, float rad);
+t_vec3				rotation_around_y(t_vec3 v, float rad);
+t_vec3				rotation_around_z(t_vec3 v, float rad);
+float				Q_rsqrt(float number);
+float				norme_vec3_power2(t_vec3 a);
+t_vec3				vec3_from_2pts(t_vec3 *a, t_vec3 *b);
+t_vec3				sum_alg_2vec3(float l, t_vec3 *v, float m, t_vec3 *u);
+float				angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u);
+int					in_angular_sector(
+						t_vec3 *a, t_vec3 *b, t_vec3 *c, t_vec3 *p);
+int					on_sphere(t_vec3 *o, float d, t_vec3 *p);
+int					check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c);
+t_vec3				normal_of_tr(t_vec3 *a, t_vec3 *b, t_vec3 *c);
 
 /* String ******************************************************************* */
 char				*build_str(char *s1, char c);
@@ -92,6 +121,8 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*strjoin_free(char *s1, char *s2, int n);
 
 /* Type changing ************************************************************ */
+int					can_atof(const char *str);
+float				ft_atof(const char *str);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_ulltoa(unsigned long long n);

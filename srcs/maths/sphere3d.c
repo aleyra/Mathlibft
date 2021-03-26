@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 14:01:41 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 14:12:01 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:16 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 int	on_sphere(t_vec3 *o, float d, t_vec3 *p)
 {

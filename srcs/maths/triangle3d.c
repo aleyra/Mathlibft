@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 11:27:47 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 14:13:39 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:11 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 {

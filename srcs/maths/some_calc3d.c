@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/19 13:49:35 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:18 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 float	norme_vec3_power2(t_vec3 a)
 {

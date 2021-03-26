@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 10:49:07 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/19 13:55:32 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:25 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 float	deg_to_rad(int d)
 {

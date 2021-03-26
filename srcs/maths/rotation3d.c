@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 11:04:33 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/22 11:27:53 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:20 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 t_vec3	rotation_around_x(t_vec3 v, float rad)
 {

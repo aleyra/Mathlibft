@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 16:05:07 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/10 16:07:42 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:19 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 float	Q_rsqrt(float number)
 {

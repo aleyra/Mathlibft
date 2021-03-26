@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 13:37:22 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 14:04:27 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:23 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 void	init_tvec3_to_0(t_vec3 *org)
 {

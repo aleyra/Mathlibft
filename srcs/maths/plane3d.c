@@ -6,11 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 13:08:22 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/18 14:07:57 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 13:08:21 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "maths3d.h"
+#include "libft.h"
 
 int	in_plane(t_vec3 *o, t_vec3 *n, t_vec3 *p)
 {
