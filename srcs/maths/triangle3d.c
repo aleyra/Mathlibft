@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 11:27:47 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/26 13:08:11 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 15:06:09 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 	ab = vec3_from_2pts(a, b);
 	ac = vec3_from_2pts(a, c);
 	l = ab.x / ac.x;
-	return (!(ab.y <= l * ac.y + 0.001f && ab.y >= l * ac.y - 0.001f
+	return ((ab.y <= l * ac.y + 0.001f && ab.y >= l * ac.y - 0.001f
 			&& ab.z <= l * ac.z + 0.001f && ab.z >= l * ac.z - 0.001f));
 }
 
