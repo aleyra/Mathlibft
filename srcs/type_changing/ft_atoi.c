@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:43:37 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/26 15:45:14 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/03/26 16:01:01 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int	can_atoi(const char *str)
 {
 	int	i;
 
-	if (!(str[0] == '-' || ft_isdigit[str[0]]))
+	if (!(str[0] == '-' || ft_isdigit(str[0])))
 		return (0);
 	i = 1;
-	while(str && str[i])
+	while (str && str[i])
 	{
 		if (!ft_isdigit(str[i]))
 			return (0);
