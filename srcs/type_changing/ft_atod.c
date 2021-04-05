@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 11:33:41 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/02 10:54:03 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/02 14:00:21 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	can_atof(const char *str)
 	while (str && str[i])
 	{
 		if (!ft_isdigit(str[i]) || str[i] != '.')
-			return (0);
+			return (1);
 		if (str[i] == '.')
 			nb_of_pt++;
 		i++;

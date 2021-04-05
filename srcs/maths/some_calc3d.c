@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/02 11:12:28 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/02 11:14:35 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ t_vec3	sum_alg_2vec3(float l, t_vec3 *v, float m, t_vec3 *u)
 //in reality, it's cos of angle
 float	angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u)
 {
-	float	c_rad;
+	float	rad;
 
-	c_rad = (norme_vec3_power2(sum_alg_2vec3(
+	rad = (norme_vec3_power2(sum_alg_2vec3(
 					1, v, 1, u)) - norme_vec3_power2(
 				*v) - norme_vec3_power2(*u)) * (0.5 * Q_rsqrt(
 				norme_vec3_power2(*v)) * Q_rsqrt(norme_vec3_power2(*u)));
-	return (c_rad);
+	return (rad);
 }
 
 int	in_angular_sector(t_vec3 *a, t_vec3 *b, t_vec3 *c, t_vec3 *p)

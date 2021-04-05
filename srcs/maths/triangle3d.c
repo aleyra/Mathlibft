@@ -6,23 +6,35 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 11:27:47 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/26 15:06:09 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/02 16:31:25 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"//
 
 int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 {
 	t_vec3	ab;
 	t_vec3	ac;
 	float	l;
+	t_vec3	o;
 
 	ab = vec3_from_2pts(a, b);
 	ac = vec3_from_2pts(a, c);
-	l = ab.x / ac.x;
-	return ((ab.y <= l * ac.y + 0.001f && ab.y >= l * ac.y - 0.001f
-			&& ab.z <= l * ac.z + 0.001f && ab.z >= l * ac.z - 0.001f));
+	init_tvec3_to_0(&o);
+	l = 0.001;
+	if (check_vec3_same(ab, o) || check_vec3_same (ac, o))
+		return (0);
+	if (ab.x != 0 && ac.x != 0)
+		l = ab.x / ac.x;
+	else if (ab.y != 0 && ac.y != 0)
+		l = ab.y / ac.y;
+	else if (ab.z != 0 && ac.z != 0)
+		l = ab.z / ac.z;
+	else//
+		printf("t'es ds la merde\n");//
+	return (check_vec3_same(ab, sum_alg_2vec3(l, &ac, 0, &o)));
 }
 
 t_vec3	normal_of_tr(t_vec3 *a, t_vec3 *b, t_vec3 *c)
