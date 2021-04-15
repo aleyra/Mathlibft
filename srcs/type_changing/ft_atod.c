@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 11:33:41 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/02 14:00:21 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 16:05:33 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ static float	sign_of_atof(const char *str, int *i)
 double	ft_atod(const char *str)
 {
 	long double	atof;
-	int		i;
-	float	sign;
-	float	decimal;
+	int			i;
+	float		sign;
+	float		decimal;
 
 	i = 0;
 	if (str[i] == 0)
@@ -72,6 +72,5 @@ double	ft_atod(const char *str)
 		i++;
 		decimal *= 0.1;
 	}
-	atof *= sign;
-	return ((double) atof);
+	return ((double)(atof * sign));
 }

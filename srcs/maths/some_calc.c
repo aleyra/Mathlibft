@@ -6,13 +6,13 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 16:05:07 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/26 13:15:29 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 13:15:36 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-float	Q_rsqrt(float number)
+float	q_rsqrt(float number)
 {
 	long		i;
 	float		x2;

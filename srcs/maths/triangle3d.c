@@ -6,12 +6,11 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 11:27:47 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/02 16:31:25 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 16:03:34 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"//
 
 int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 {
@@ -32,8 +31,6 @@ int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 		l = ab.y / ac.y;
 	else if (ab.z != 0 && ac.z != 0)
 		l = ab.z / ac.z;
-	else//
-		printf("t'es ds la merde\n");//
 	return (check_vec3_same(ab, sum_alg_2vec3(l, &ac, 0, &o)));
 }
 

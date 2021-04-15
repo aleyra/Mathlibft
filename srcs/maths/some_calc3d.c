@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/02 11:14:35 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 13:15:37 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ float	angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u)
 
 	rad = (norme_vec3_power2(sum_alg_2vec3(
 					1, v, 1, u)) - norme_vec3_power2(
-				*v) - norme_vec3_power2(*u)) * (0.5 * Q_rsqrt(
-				norme_vec3_power2(*v)) * Q_rsqrt(norme_vec3_power2(*u)));
+				*v) - norme_vec3_power2(*u)) * (0.5 * q_rsqrt(
+				norme_vec3_power2(*v)) * q_rsqrt(norme_vec3_power2(*u)));
 	return (rad);
 }
 
