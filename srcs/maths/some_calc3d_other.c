@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 14:15:51 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/14 15:30:33 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/29 09:54:32 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	make_vec3_norm(t_vec3 *v)
 {
-	v->x = v->x / sqrt(norme_vec3_power2(*v));
-	v->y = v->y / sqrt(norme_vec3_power2(*v));
-	v->z = v->z / sqrt(norme_vec3_power2(*v));
+	float	n;
+
+	n = norme_vec3_power2(*v);
+	v->x = v->x / sqrt(n);
+	v->y = v->y / sqrt(n);
+	v->z = v->z / sqrt(n);
 }
 
 int	check_vec3_same(t_vec3 v, t_vec3 u)
@@ -28,4 +31,22 @@ int	check_vec3_same(t_vec3 v, t_vec3 u)
 	if (!(u.z + 0.001f >= v.z && v.z >= u.z - 0.001f))
 		return (0);
 	return (1);
+}
+
+float	dot_prod(t_vec3 v, t_vec3 u)
+{
+	float	r;
+
+	r = v.x * u.x + v.y * u.y + v.z * u.z;
+	return (r);
+}
+
+t_vec3	cross_prod(t_vec3 u, t_vec3 v)
+{
+	t_vec3	cp;
+
+	cp.x = u.y * v.z - u.z * v.y;
+	cp.y = u.z * v.x - u.x * v.z;
+	cp.z = u.x * v.y - u.y * v.x;
+	return (cp);
 }

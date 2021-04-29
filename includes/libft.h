@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/03/26 15:45:31 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/22 12:40:47 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ float				angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u);
 int					in_angular_sector(
 						t_vec3 *a, t_vec3 *b, t_vec3 *c, t_vec3 *p);
 void				make_vec3_norm(t_vec3 *v);
+float				dot_prod(t_vec3 v, t_vec3 u);
+t_vec3				cross_prod(t_vec3 u, t_vec3 v);
 int					on_sphere(t_vec3 *o, float d, t_vec3 *p);
 int					check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c);
 t_vec3				normal_of_tr(t_vec3 *a, t_vec3 *b, t_vec3 *c);
