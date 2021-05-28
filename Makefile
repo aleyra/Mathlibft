@@ -6,7 +6,7 @@
 #    By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 13:39:23 by lucille           #+#    #+#              #
-#    Updated: 2021/03/26 14:17:17 by lburnet          ###   ########lyon.fr    #
+#    Updated: 2021/05/28 12:46:08 by lburnet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRCS_TYPE	=	ft_atod.c ft_atoi.c ft_itoa.c ft_ulltoa.c
 SRCS_BASE	=	decimal_to_hexa.c 
 SRCS_LIST	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 SRCS_FILE	=	get_next_line.c
-SRCS_MATHS	=	conversions.c plane3d.c rotation3d.c some_calc.c some_calc3d.c some_calc3d_other.c sphere3d.c triangle3d.c init_t_vec3.c
+SRCS_MATHS	=	conversions.c plane3d.c rotation3d.c some_calc_cplx.c some_calc3d.c some_calc3d_other.c sphere3d.c triangle3d.c init_t_vec3.c
 SRCS		=	$(addprefix $(PATH_SRCS)/display/, $(SRCS_DISP)) \
 				$(addprefix $(PATH_SRCS)/string/, $(SRCS_STR)) \
 				$(addprefix $(PATH_SRCS)/character/, $(SRCS_CHAR)) \

@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/05/28 10:51:31 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/28 12:45:14 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,13 @@ typedef struct s_vec3
 	float	z;
 }			t_vec3;
 
+typedef struct s_cplx
+{
+	float	x;
+	float	y;
+}			t_cplx;
+
+
 float				deg_to_rad(int d);
 int					rad_to_deg(float	r);
 float				angle_one_polaris(t_vec3 *v);
@@ -88,6 +95,11 @@ int					in_plane(t_vec3 *o, t_vec3 *n, t_vec3 *p);
 t_vec3				rotation_around_x(t_vec3 v, float rad);
 t_vec3				rotation_around_y(t_vec3 v, float rad);
 t_vec3				rotation_around_z(t_vec3 v, float rad);
+t_cplx				alg_cplx(float l, t_cplx a, float m, t_cplx b);
+float				module_cplx_pow2(t_cplx z);
+t_cplx				conj_cplx(t_cplx z);
+t_cplx				mult_cplx(t_cplx a, t_cplx b);
+t_cplx				div_cplx(t_cplx a, t_cplx b);
 float				Q_rsqrt(float number);
 float				norme_vec3_power2(t_vec3 a);
 t_vec3				vec3_from_2pts(t_vec3 *a, t_vec3 *b);
