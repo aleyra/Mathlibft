@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 12:19:36 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/13 13:15:37 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/28 10:49:39 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,35 +38,4 @@ t_vec3	sum_alg_2vec3(float l, t_vec3 *v, float m, t_vec3 *u)
 	lvpmu.y = l * v->y + m * u->y;
 	lvpmu.z = l * v->z + m * u->z;
 	return (lvpmu);
-}
-
-//in reality, it's cos of angle
-float	angle_vec3v_vec3u(t_vec3 *v, t_vec3 *u)
-{
-	float	rad;
-
-	rad = (norme_vec3_power2(sum_alg_2vec3(
-					1, v, 1, u)) - norme_vec3_power2(
-				*v) - norme_vec3_power2(*u)) * (0.5 * q_rsqrt(
-				norme_vec3_power2(*v)) * q_rsqrt(norme_vec3_power2(*u)));
-	return (rad);
-}
-
-int	in_angular_sector(t_vec3 *a, t_vec3 *b, t_vec3 *c, t_vec3 *p)
-{
-	float	abac;
-	float	abap;
-	t_vec3	ab;
-	t_vec3	ac;
-	t_vec3	ap;
-
-	ab = vec3_from_2pts(a, b);
-	ac = vec3_from_2pts(a, c);
-	ap = vec3_from_2pts(a, p);
-	abac = angle_vec3v_vec3u(&ab, &ac);
-	abap = angle_vec3v_vec3u(&ab, &ap);
-	if (abac <= abap)
-		return (1);
-	else
-		return (-1);
 }

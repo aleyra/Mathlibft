@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 14:15:51 by lburnet           #+#    #+#             */
-/*   Updated: 2021/04/29 09:54:32 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/05/07 12:53:27 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,14 @@ t_vec3	cross_prod(t_vec3 u, t_vec3 v)
 	cp.y = u.z * v.x - u.x * v.z;
 	cp.z = u.x * v.y - u.y * v.x;
 	return (cp);
+}
+
+t_vec3	opp_vec3(t_vec3 u)
+{
+	t_vec3	v;
+
+	v.x = -(u.x);
+	v.y = -(u.y);
+	v.z = -(u.z);
+	return (v);
 }
