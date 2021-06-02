@@ -6,7 +6,7 @@
 /*   By: lburnet <lburnet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:36:57 by lburnet           #+#    #+#             */
-/*   Updated: 2021/06/01 14:16:28 by lburnet          ###   ########lyon.fr   */
+/*   Updated: 2021/06/02 16:08:59 by lburnet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ float				module_cplx_pow2(t_cplx z);
 t_cplx				conj_cplx(t_cplx z);
 t_cplx				mult_cplx(t_cplx a, t_cplx b);
 t_cplx				div_cplx(t_cplx a, t_cplx b);
+t_cplx				cplx_pow(t_cplx z, int i);
 float				Q_rsqrt(float number);
 float				norme_vec3_power2(t_vec3 a);
 t_vec3				vec3_from_2pts(t_vec3 *a, t_vec3 *b);
