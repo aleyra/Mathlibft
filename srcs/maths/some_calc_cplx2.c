@@ -18,7 +18,7 @@ t_cplx	cplx_pow(t_cplx z, int i)
 	else
 	{
 		res = z;
-		while (++j <= 2)
+		while (++j <= i)
 			res = mult_cplx(res, z);
 	}
 	return (res);
