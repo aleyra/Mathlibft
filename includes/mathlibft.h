@@ -23,13 +23,16 @@ struct s_cplx
 };
 
 /* in complexes ************************************************************* */
-t_cplx  			make_cplx(float x, float y);
 t_cplx				alg_cplx(float l, t_cplx a, float m, t_cplx b);
-float				module_cplx_pow2(t_cplx z);
-t_cplx				conj_cplx(t_cplx z);
+t_cplx				add_cplx(t_cplx a, t_cplx b);
+t_cplx				subs_cplx(t_cplx a, t_cplx b);
+t_cplx				lambda_cplx(float l, t_cplx z);
 t_cplx				mult_cplx(t_cplx a, t_cplx b);
 t_cplx				div_cplx(t_cplx a, t_cplx b);
 t_cplx				cplx_pow(t_cplx z, int i);
+t_cplx  			make_cplx(float x, float y);
+float				module_cplx_pow2(t_cplx z);
+t_cplx				conj_cplx(t_cplx z);
 
 /* in no_geometry *********************************************************** */
 float				deg_to_rad(int d);
@@ -41,10 +44,7 @@ void				init_tvec3_to_1x(t_vec3 *i);
 void				init_tvec3_to_1y(t_vec3 *j);
 void				init_tvec3_to_1z(t_vec3 *k);
 t_vec3				rotation_around_x(t_vec3 v, float rad);
-t_vec3				rotation_around_y(t_vec3 v, float rad);
-t_vec3				rotation_around_z(t_vec3 v, float rad);
-float				norme_vec3_power2(t_vec3 a);
-t_vec3				vec3_from_2pts(t_vec3 *a, t_vec3 *b);
+t_vec3				rotation_around_y(t_vec3 *a, t_vec3 *b);
 t_vec3				sum_alg_2vec3(float l, t_vec3 *v, float m, t_vec3 *u);
 void				make_vec3_norm(t_vec3 *v);
 int					check_vec3_same(t_vec3 v, t_vec3 u);
