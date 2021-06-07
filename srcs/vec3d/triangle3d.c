@@ -1,15 +1,15 @@
 #include "mathlibft.h"
 
-int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
+int	check_not_aligned(t_vec3 a, t_vec3 b, t_vec3 c)
 {
 	t_vec3	ab;
 	t_vec3	ac;
 	float	l;
 	t_vec3	o;
 
-	ab = vec3_from_2pts(a, b);
-	ac = vec3_from_2pts(a, c);
-	init_tvec3_to_0(&o);
+	ab = make_vec3_from2pts(a, b);
+	ac = make_vec3_from2pts(a, c);
+	o = init_origin_vec3();
 	l = 0.001;
 	if (check_vec3_same(ab, o) || check_vec3_same (ac, o))
 		return (0);
@@ -19,7 +19,7 @@ int	check_not_aligned(t_vec3 *a, t_vec3 *b, t_vec3 *c)
 		l = ab.y / ac.y;
 	else if (ab.z != 0 && ac.z != 0)
 		l = ab.z / ac.z;
-	return (check_vec3_same(ab, sum_alg_2vec3(l, &ac, 0, &o)));
+	return (check_vec3_same(ab, alg_vec3(l, &ac, 0, &o)));
 }
 
 t_vec3	normal_of_tr(t_vec3 *a, t_vec3 *b, t_vec3 *c)

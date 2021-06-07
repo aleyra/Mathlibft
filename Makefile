@@ -12,9 +12,9 @@ PATH_LOG	=	logs
 PATH_SRCS	=	srcs
 
 # List of sources
-SRCS_CPLX	=	cplx.c some_calc_cplx.c some_calc_cplx2.c \
+SRCS_CPLX	=	algebre1.c algebre2.c init_cplx.c properties.c \
 SRCS_NO_GEO	=	conversions.c \
-SRCS_VEC3D	=	init_t_vec3.c rotation3d.c some_calc3d.c some_calc3d_other.c \
+SRCS_VEC3D	=	algebre1.c algebre2.c init_vec3.c roperties.c rotation3d.c \
 				triangle3d.c 
 SRCS		=	$(addprefix $(PATH_SRCS)/file/, $(SRCS_CPLX)) \
 				$(addprefix $(PATH_SRCS)/file/, $(SRCS_NO_GEO)) \
