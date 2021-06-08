@@ -1,5 +1,5 @@
-#ifndef MATHLIBFT
-# define MATHLIBFT
+#ifndef MATHLIBFT_H
+# define MATHLIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -30,7 +30,7 @@ t_cplx	lambda_cplx(float l, t_cplx z);
 t_cplx	mult_cplx(t_cplx a, t_cplx b);
 t_cplx	div_cplx(t_cplx a, t_cplx b);
 t_cplx	cplx_pow(t_cplx z, int i);
-t_cplx  make_cplx(float x, float y);
+t_cplx	make_cplx(float x, float y);
 float	module_cplx_pow2(t_cplx z);
 t_cplx	conj_cplx(t_cplx z);
 
@@ -56,7 +56,7 @@ t_vec3	vec3_cross_prod(t_vec3 u, t_vec3 v);
 t_vec3	vec3_rot_around_x(t_vec3 v, float rad);
 t_vec3	vec3_rot_around_y(t_vec3 v, float rad);
 t_vec3	vec3_rot_around_z(t_vec3 v, float rad);
-t_vec3  vec3_rot_axis(t_vec3 v, t_vec3 axis, float rad);
+t_vec3	vec3_rot_axis(t_vec3 v, t_vec3 axis, float rad);
 int		check_not_aligned(t_vec3 a, t_vec3 b, t_vec3 c);
 t_vec3	normal_of_tr(t_vec3 *a, t_vec3 *b, t_vec3 *c);
 

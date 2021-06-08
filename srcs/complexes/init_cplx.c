@@ -1,10 +1,10 @@
 #include "mathlibft.h"
 
-t_cplx  make_cplx(float x, float y)
+t_cplx	make_cplx(float x, float y)
 {
-    t_cplx  z;
+	t_cplx	z;
 
-    z.x = x;
-    z.y = y;
-    return (z);
+	z.x = x;
+	z.y = y;
+	return (z);
 }
